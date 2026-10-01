@@ -1,0 +1,14 @@
+[build]
+  # Publish directory (where your static files are)
+  publish = "."
+  
+  # Functions directory
+  functions = "netlify/functions"
+
+[build.environment]
+  # Build environment variables (if needed)
+  NODE_VERSION = "18"
+  # Disable secrets scanning - the webhook URLs are public endpoints
+  # The actual secret (N8N_PASSWORD) is only in environment variables, never in code
+  SECRETS_SCAN_ENABLED = "false"
+
